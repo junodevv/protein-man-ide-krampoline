@@ -29,6 +29,9 @@ public class CodeService {
     }
 
     public Long saveCode(CodeDto dto) {
+        if (codeRepository.existsById(1L)) {
+            throw new IllegalArgumentException("이미 코드가 존재합니다.");
+        }
         Long userNo = getUserInfo();
         User user = userRepository.getReferenceById(userNo);
         Code code = dto.toEntity(user);
