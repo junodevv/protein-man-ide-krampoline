@@ -18,6 +18,28 @@ USE `ptmanDB`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `Code`
+--
+
+DROP TABLE IF EXISTS `Code`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `Code` (
+  `code_no` bigint NOT NULL,
+  `user_no` bigint NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Code`
+--
+
+LOCK TABLES `Code` WRITE;
+/*!40000 ALTER TABLE `Code` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Code` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `chat`
 --
 
@@ -173,6 +195,35 @@ LOCK TABLES `chat_user_table` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `code`
+--
+
+DROP TABLE IF EXISTS `code`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `code` (
+  `deleted` bit(1) DEFAULT NULL,
+  `code_no` bigint NOT NULL AUTO_INCREMENT,
+  `created_at` datetime(6) NOT NULL,
+  `updated_at` datetime(6) NOT NULL,
+  `user_no` bigint DEFAULT NULL,
+  `text` varchar(10000) NOT NULL,
+  PRIMARY KEY (`code_no`),
+  KEY `FK4bkia7mxf9e0ve8nigaq3nj3h` (`user_no`),
+  CONSTRAINT `FK4bkia7mxf9e0ve8nigaq3nj3h` FOREIGN KEY (`user_no`) REFERENCES `user` (`user_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `code`
+--
+
+LOCK TABLES `code` WRITE;
+/*!40000 ALTER TABLE `code` DISABLE KEYS */;
+/*!40000 ALTER TABLE `code` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `user`
 --
 
@@ -210,4 +261,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-25 14:03:38
+-- Dump completed on 2024-04-25 17:29:13
