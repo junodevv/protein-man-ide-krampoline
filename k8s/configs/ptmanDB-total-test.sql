@@ -18,19 +18,6 @@ USE `ptmanDB`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `Code`
---
-
-DROP TABLE IF EXISTS `Code`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `Code` (
-  `code_no` bigint NOT NULL,
-  `user_no` bigint NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Table structure for table `chat`
 --
 
@@ -53,6 +40,15 @@ CREATE TABLE `chat` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `chat`
+--
+
+LOCK TABLES `chat` WRITE;
+/*!40000 ALTER TABLE `chat` DISABLE KEYS */;
+/*!40000 ALTER TABLE `chat` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `chat_room`
 --
 
@@ -69,6 +65,15 @@ CREATE TABLE `chat_room` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `chat_room`
+--
+
+LOCK TABLES `chat_room` WRITE;
+/*!40000 ALTER TABLE `chat_room` DISABLE KEYS */;
+/*!40000 ALTER TABLE `chat_room` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `chat_room_table`
 --
 
@@ -81,6 +86,15 @@ CREATE TABLE `chat_room_table` (
   `created_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `chat_room_table`
+--
+
+LOCK TABLES `chat_room_table` WRITE;
+/*!40000 ALTER TABLE `chat_room_table` DISABLE KEYS */;
+/*!40000 ALTER TABLE `chat_room_table` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `chat_table`
@@ -97,6 +111,15 @@ CREATE TABLE `chat_table` (
   `created_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `chat_table`
+--
+
+LOCK TABLES `chat_table` WRITE;
+/*!40000 ALTER TABLE `chat_table` DISABLE KEYS */;
+/*!40000 ALTER TABLE `chat_table` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `chat_user`
@@ -118,6 +141,15 @@ CREATE TABLE `chat_user` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `chat_user`
+--
+
+LOCK TABLES `chat_user` WRITE;
+/*!40000 ALTER TABLE `chat_user` DISABLE KEYS */;
+/*!40000 ALTER TABLE `chat_user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `chat_user_table`
 --
 
@@ -130,6 +162,15 @@ CREATE TABLE `chat_user_table` (
   `room_no` bigint NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `chat_user_table`
+--
+
+LOCK TABLES `chat_user_table` WRITE;
+/*!40000 ALTER TABLE `chat_user_table` DISABLE KEYS */;
+/*!40000 ALTER TABLE `chat_user_table` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `user`
@@ -148,8 +189,17 @@ CREATE TABLE `user` (
   `username` varchar(255) NOT NULL,
   `delete_status` enum('DELETE','ACTIVE') DEFAULT NULL,
   PRIMARY KEY (`user_no`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -160,4 +210,4 @@ CREATE TABLE `user` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-22 22:46:55
+-- Dump completed on 2024-04-25 14:03:38

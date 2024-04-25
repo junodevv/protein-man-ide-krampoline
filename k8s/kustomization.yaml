@@ -7,4 +7,4 @@ resources:
 configMapGenerator:
   - name: init-db
     files:
-      - configs/ptmanDB_chat_user_init.sql
+      - configs/ptmanDB-total-test.sql
