@@ -40,6 +40,10 @@ dependencies {
 
 	// Mockito 관련 의존성
 	testImplementation 'org.mockito:mockito-core:4.8.0'
+
+	// warning: unknown enum constant When.MAYBE
+	//  reason: class file for javax.annotation.meta.When not found 해결 의존성
+	implementation 'com.google.code.findbugs:jsr305:3.0.2'
 }
 
 tasks.named('test') {
